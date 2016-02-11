@@ -5,7 +5,7 @@ LOCALPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "$LOCALPATH"
 i=0
 nb=0
-var=$(.${MYPATH}/fillit \200)
+var=$(${MYPATH}/./fillit \200)
 if [ "$var" != "error" ]
 then
 	echo "\033[0;31mFAIL: your fillit don't put usage.\033[0m" 
@@ -15,7 +15,7 @@ echo "--- begin of invalid test ---"
 while [ "$i" != 20 ]
 do
 	echo "invalid test $i : \c"
-	var=$(./${MYPATH}/fillit ${LOCALPATH}/error_file/error_$i)
+	var=$(${MYPATH}/./fillit ${LOCALPATH}/error_file/error_$i)
 	if [ "$var" != "error" ]
 	then
 		echo "\033[0;31mfail :/\033[0m"
@@ -39,8 +39,8 @@ echo "___ begin of valid test ___"
 while [ "$i" != 20 ]
 do
 	echo "valid test $i : \c"
-	var=$(./${MYPATH}/fillit ${LOCALPATH}/correct_file/valid_$i)
-	var2=$(./${LOCALPATH}/goodfillit ${LOCALPATH}/correct_file/valid_$i)
+	var=$(${MYPATH}/./fillit ${LOCALPATH}/correct_file/valid_$i)
+	var2=$(${LOCALPATH}/./goodfillit ${LOCALPATH}/correct_file/valid_$i)
 	if [ "$var" != "$var2" ]
 	then
 		echo "\033[0;31mfail :/\033[0m"
@@ -63,8 +63,8 @@ if [ "$nb3" = 40 ]
 then
 
 	echo "\033[0;34mBONUS : \033[0m"
-	time ./${MYPAtH}/fillit ${LOCALPATH}/correct_file/valid_20
-	time ./${MYPATH}/fillit ${LOCALPATH}/correct_file/valid_21
+	time ${MYPAtH}/./fillit ${LOCALPATH}/correct_file/valid_20
+	time ${MYPATH}/./fillit ${LOCALPATH}/correct_file/valid_21
 	echo "NOTE: \033[0;32m42/42\033[0m"
 else
 	(( nb += nb2 ))
