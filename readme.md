@@ -1,4 +1,4 @@
-FILLIT_CHECKER:
+# FILLIT_CHECKER
 
 Ce test s'assure du bon fonctionnement du programme.
 
@@ -6,6 +6,8 @@ Ce test s'assure du bon fonctionnement du programme.
 
 2: pour lancer le test, faites la commande qui suit:
 
-sh test.sh
+```bash
+sh test.sh "/YOUR/PROJECT/DIRECTORY"
+```
 
 created by agadhgad 2015
