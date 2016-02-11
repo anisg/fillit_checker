@@ -2,15 +2,9 @@
 MYPATH="$1"
 echo "fillit_checker by agadhgad"
 LOCALPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-echo "$LOCALPATH"
 i=0
 nb=0
 var=$(${MYPATH}/./fillit \200)
-if [ "$var" != "error" ]
-then
-	echo "\033[0;31mFAIL: your fillit don't put usage.\033[0m" 
-	exit 1
-fi
 echo "--- begin of invalid test ---"
 while [ "$i" != 20 ]
 do
