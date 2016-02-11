@@ -1,6 +1,6 @@
 #!/bin/bash
 MYPATH="$1"
-echo "fillit_checker by agadhgad $MYPATH"
+echo "fillit_checker by agadhgad"
 LOCALPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "$LOCALPATH"
 i=0
@@ -63,7 +63,7 @@ if [ "$nb3" = 40 ]
 then
 
 	echo "\033[0;34mBONUS : \033[0m"
-	time ${MYPAtH}/./fillit ${LOCALPATH}/correct_file/valid_20
+	time ${MYPATH}/./fillit ${LOCALPATH}/correct_file/valid_20
 	time ${MYPATH}/./fillit ${LOCALPATH}/correct_file/valid_21
 	echo "NOTE: \033[0;32m42/42\033[0m"
 else
