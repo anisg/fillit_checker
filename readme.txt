@@ -1,11 +1,11 @@
 FILLIT_CHECKER:
 
-Ce test s'assure du bon fonctionnement du programme.
+Ce test s'assure du bon fonctionnement de votre fillit.
 
-1: placer l'executable fillit a la racine de ce dossier
+pour lancer le test, faites la commande qui suit:
 
-2: pour lancer le test, faites la commande qui suit:
+sh test.sh FOLDER_FILLIT
 
-sh test.sh
+Avec FOLDER_FILLIT le dossier qui contient à sa racine fillit.
 
 created by agadhgad 2015
