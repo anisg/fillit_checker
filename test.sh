@@ -1,6 +1,6 @@
 #!/bin/bash
 MYPATH="$1"
-command -v $MYPATH/fillit >/dev/null 2>&1 || { echo "Don't find fillit!\nNOTE: \033[0;31m0 / 47\033[0m"; exit 1; }
+command -v $MYPATH/fillit >/dev/null 2>&1 || { echo "Don't find fillit!\nNOTE: \033[0;31m0 / 48\033[0m"; exit 1; }
 echo "fillit_checker by agadhgad"
 LOCALPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -62,20 +62,20 @@ function test()
 
 function bonus()
 {
-	if [ "$nb" = 47 ]
+	if [ "$nb" = 48 ]
 	then
 		echo "\033[0;34mBONUS : \033[0m"
 		time ${MYPATH}/./fillit ${LOCALPATH}/correct_file/valid_20
 		time ${MYPATH}/./fillit ${LOCALPATH}/correct_file/valid_21
-		echo "NOTE: \033[0;32m49/49\033[0m"
+		echo "NOTE: \033[0;32m49/50\033[0m"
 	else
-		echo "NOTE: \033[0;31m$nb / 47\033[0m"
+		echo "NOTE: \033[0;31m$nb / 48\033[0m"
 	fi
 }
 
 function main()
 {
-	test invalid "error_file/error_" 27 "echo "error"" 0 error_put
+	test invalid "error_file/error_" 28 "echo "error"" 0 error_put
 	test valid "correct_file/valid_" 20 "cat ${LOCALPATH}/correct_compare/output_valid_" 1 valid_put
 	bonus
 }
