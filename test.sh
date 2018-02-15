@@ -75,6 +75,7 @@ function bonus()
 
 function main()
 {
+	make -C $1 
 	test invalid "error_file/error_" 26 "echo "error"" 0 error_put
 	test valid "correct_file/valid_" 20 "cat ${LOCALPATH}/correct_compare/output_valid_" 1 valid_put
 	bonus
