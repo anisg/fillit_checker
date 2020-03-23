@@ -1,3 +1,6 @@
+
+## Looking for maintainer :warning: contact me on my student email (login: agadhgad)
+
 FILLIT_CHECKER:
 
 Ce test s'assure du bon fonctionnement de votre fillit.
